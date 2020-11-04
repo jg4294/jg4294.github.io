@@ -1,0 +1,75 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(viridis)
+library(p8105.datasets)
+library(plotly)
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+data("instacart")
+
+# Visualize the distributions of number of items ordered in each aisle(focus on number of items greater than 10000).
+bar = 
+  instacart %>%
+  count(aisle) %>%
+  filter(n > 10000) %>% 
+  mutate(aisle = fct_reorder(aisle,n)) %>%
+  arrange(desc(n)) %>%
+  plot_ly(x = ~aisle, y = ~n, color = ~aisle, type = "bar", colors = "viridis") %>%
+  layout(title = "Total number in different aisles (>10000)",     
+         xaxis = list(title = "Aisles"),
+         yaxis = list(title = "Number of Items"))
+bar
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+# Visualize the order time of the first 3 most popular items in aisles 'baking ingredients'
+
+box = 
+  instacart %>% 
+  select(order_hour_of_day, product_name) %>% 
+  filter(product_name == "Light Brown Sugar" |
+          product_name == "Pure Baking Soda" |
+          product_name == "Cane Sugar") %>%
+  plot_ly(y = ~order_hour_of_day, color = ~product_name, type = "box",
+          colors = "viridis")
+box
+```
+
+### Chart C
+
+```{r}
+pie =
+  instacart %>%
+  select(order_dow, aisle) %>% 
+  filter(order_dow == 5) %>% 
+  group_by(aisle) %>% 
+  summarize(n = n()) %>% 
+  filter(n >= 5000) %>% 
+  mutate(percentage = (n / sum(n))) %>% 
+  plot_ly( labels = ~aisle, values = ~percentage, type = 'pie', colors = "viridis") %>%
+  layout(title = "Order numbers greater than 1000 on Friday ")
+pie
+```
+
