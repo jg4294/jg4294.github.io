@@ -1,0 +1,51 @@
+---
+title: "About"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Personal Information
+
+* Jingyao Geng 
+* Phone: (803)-740-9701
+* Email: jg4294@cumc.columbia.edu
+* Alternative Email: nancy200819@163.com 
+* Address: 1041 Marion St, Columbia, South Carolina, 29201
+
+# Education Background 
+
+University of South Carolina  08/2015-12/2019     
+
+* Major: Statistics
+* Minor: Risk Management and Insurance 
+
+  ➢ Honors and awards:  The Dean’s List, The President’s List, Columbia Undergrad Nonresident Scholarship, USC Academic Achievement Scholarship, NSCS Member Diploma 
+ 
+# Internship Experience
+
+* SWS MU Fund Management Co., Ltd (08/2018-09/2019)
+* Kunming Ziding Automobiles Sales Company (07/2017-08/2017)
+ 
+# Research Projects 
+
+Time Series Analysis:
+
+* Analysis Report for Chicago White Sox Baseball Team Pitching Performance (From 1901 to 2009)
+* Analysis Report for Annual Number of Lynx Trapped (From 1821 to 1934)
+* Analysis Report for Monthly Median Home Price in US (From 01/1963 to 09/2019)
+
+Data visualization Analysis:
+
+* Food-Safety and Nutrition Board
+* Car's Performance
+
+...                                        
+
+# Supplemental Information  
+
+* P rogramming Languages: Java, MySQL, Python, R, R-Studio, LaTex, Jupiter notebook  
+* Packages: SAS, STAT, SPSS, Minitab, SPLM, Maple 
+* Software Packages: MS Office 2010, Adobe Photoshop 

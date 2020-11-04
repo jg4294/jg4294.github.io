@@ -1,0 +1,15 @@
+name: "Yay internet!"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - text: "Dashboard"
+      href: dashboard.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<jg4294@cumc.columbia.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/jg4294/
+output:
+  html_document
